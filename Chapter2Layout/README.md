@@ -1,6 +1,6 @@
 Chapter2 - 기본 레이아웃
 ================================
-
+YoonSeungMin
 Starter code for the Basic Layout
 
 Pre-requisites
