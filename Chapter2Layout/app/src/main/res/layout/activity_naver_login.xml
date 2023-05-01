@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".naver_login">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/naver"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/back"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/naver"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@id/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/pc"
+            android:src="@drawable/naverlogo"
+            />
+        <LinearLayout
+            android:id="@+id/pc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/naver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/input1"
+            android:weightSum="3"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PC키보드로 보기"
+                android:textSize="10dp"
+                android:layout_weight="0.7"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/expand2"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/input1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pc"
+            app:layout_constraintBottom_toTopOf="@id/input2"
+            android:background="@drawable/input1_background"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:src="@drawable/person2"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                android:text="아이디"
+                android:textStyle="bold"
+                android:layout_weight="6"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/input2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input1"
+            app:layout_constraintBottom_toTopOf="@id/login_button"
+            android:background="@drawable/input2_background"
+            android:layout_marginHorizontal="20dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/password"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                android:text="비밀번호"
+                android:textStyle="bold"
+                android:layout_weight="6"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login_button"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/login_button_background"
+            android:paddingTop="15dp"
+            android:text="로그인"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tools"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input2" />
+
+        <LinearLayout
+            android:id="@+id/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_button"
+            android:layout_marginTop="30dp"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="비밀번호 찾기"
+                android:textSize="10sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="  |  "
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="아이디 찾기"
+                android:textSize="10sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="  |  "
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="회원가입"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/naver"/>
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
