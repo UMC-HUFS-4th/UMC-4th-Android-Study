@@ -10,5 +10,11 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewbinding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(viewbinding.root)
+        val bundle = intent.extras
+        var tmpString = ""
+        if(bundle!=null){
+            tmpString = bundle.getString("text","have no text")
+        }
+        viewbinding.tvSecondActivity.text = tmpString
     }
 }
