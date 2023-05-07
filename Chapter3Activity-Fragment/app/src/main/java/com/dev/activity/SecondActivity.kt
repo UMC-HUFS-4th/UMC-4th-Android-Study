@@ -2,6 +2,7 @@ package com.dev.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.dev.activity.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
@@ -14,6 +15,7 @@ class SecondActivity : AppCompatActivity() {
         var tmpString = ""
         if(bundle!=null){
             tmpString = bundle.getString("text","have no text")
+            Log.d("Second activity", tmpString)
         }
         viewbinding.tvSecondActivity.text = tmpString
     }

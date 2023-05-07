@@ -14,7 +14,7 @@ class FirstActivity : AppCompatActivity() {
 
         viewbinding.btFirstAcitivity.setOnClickListener{
             var intent = Intent(this@FirstActivity,SecondActivity::class.java)
-            intent.putExtra("text",viewbinding.etFirstAcitivity.text)
+            intent.putExtra("text", viewbinding.etFirstAcitivity.text.toString())
             startActivity(intent)
             //finish()
         }
