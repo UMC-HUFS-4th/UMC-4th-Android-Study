@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-mergeDebugResources-4:/layout/activity_fragment_main.xml",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/activity_fragment_main.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-mergeDebugResources-4:/layout/fragment_walking.xml",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/fragment_walking.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-mergeDebugResources-4:/layout/activity_main.xml",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-mergeDebugResources-4:/layout/activity_main3.xml",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/activity_main3.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-mergeDebugResources-4:/layout/fragment_lying.xml",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/fragment_lying.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-mergeDebugResources-4:/layout/activity_main2.xml",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/activity_main2.xml"
+    }
+]

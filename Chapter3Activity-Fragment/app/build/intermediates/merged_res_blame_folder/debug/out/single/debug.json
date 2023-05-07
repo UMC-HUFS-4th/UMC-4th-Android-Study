@@ -1,0 +1,102 @@
+[
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-anydpi-v33/ic_launcher.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/xml_data_extraction_rules.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/layout_activity_main.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/layout_fragment_walking.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/fragment_walking.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/layout_activity_main2.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/activity_main2.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/drawable_walking.jpg.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/drawable/walking.jpg"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/layout_activity_main3.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/activity_main3.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/xml_backup_rules.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/layout_fragment_lying.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/fragment_lying.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/layout_activity_fragment_main.xml.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/layout/activity_fragment_main.xml"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.dyongchan.ch03_activity__fragment.app-merged_res-5:/drawable_lying.jpg.flat",
+        "source": "com.dyongchan.ch03_activity__fragment.app-main-7:/drawable/lying.jpg"
+    }
+]

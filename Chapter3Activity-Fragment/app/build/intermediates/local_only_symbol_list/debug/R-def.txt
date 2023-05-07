@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable lying
+drawable walking
+id btn_go_fragment
+id btn_lying
+id btn_main_intent
+id btn_main_toast
+id btn_remove
+id btn_walking
+id et_main
+id frame
+id tv_main3
+layout activity_fragment_main
+layout activity_main
+layout activity_main2
+layout activity_main3
+layout fragment_lying
+layout fragment_walking
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string hello_blank_fragment
+style Theme.Ch03_activity_fragment
+xml backup_rules
+xml data_extraction_rules
