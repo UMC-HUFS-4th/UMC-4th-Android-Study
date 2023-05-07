@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <!--Main color-->
+    <color name="primary_color">#94E0AC</color>
+    <!--Sub color-->
+    <color name="secondary_color">#7DEFCD</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_transparent">#B3FFFFFF</color>
+    <color name="black">#2C2C2C</color>
+    <color name="red">#FF6565</color>
+    <color name="red_wine">#DD6287</color>
+    <color name="purple_pink">#D362DD</color>
+    <color name="sky_blue">#62A9DD</color>
+    <color name="blue">#51A1C3</color>
+    <color name="blue_purple">#8167B9</color>
+    <color name="weak_purple">#9862DD</color>
+    <color name="emo_purple">#AA6BDC</color>
+
+    <color name="black_gray_transparent">#80545454</color>
+    <color name="black_gray_weak_transparent">#33545454</color>
+    <color name="gray0">#717171</color>
+    <color name="gray1">#A5A5A5</color>
+    <color name="gray2">#CCCCCC</color>
+    <color name="gray2.5">#ECECEC</color>
+    <color name="gray3">#EEEEEE</color>
+    <color name="gray4">#F6F6F6</color>
+</resources>

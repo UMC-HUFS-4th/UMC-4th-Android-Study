@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_review_user_profile_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_user_profile_gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_review_user_nickname"
+            style="@style/Text_12_Regular.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_review_user_profile_photo"
+            app:layout_constraintTop_toTopOf="@id/iv_review_user_profile_photo"
+            tools:text="우린여러분의부석수" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_review_user_level"
+            style="@style/Text_12_Regular.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_review_user_profile_photo"
+            app:layout_constraintTop_toBottomOf="@id/tv_review_user_nickname"
+            tools:text="Lv45" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_like_tag"
+            style="@style/Text_12_Medium.Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_box_solid_gray_small"
+            android:drawableStart="@drawable/ic_like"
+            android:drawablePadding="3dp"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:text="좋았어요!"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_review_user_profile_photo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_normal_tag"
+            style="@style/Text_12_Medium.Purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_box_solid_gray_small"
+            android:drawableStart="@drawable/ic_normal"
+            android:drawablePadding="3dp"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:text="보통이요!"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_review_user_profile_photo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_emotion_dislike"
+            style="@style/Text_12_Medium.Red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_box_solid_gray_small"
+            android:drawableStart="@drawable/ic_dislike"
+            android:drawablePadding="3dp"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:text="별로에요!"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_review_user_profile_photo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_review_date"
+            style="@style/Text_12_Regular.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_like_tag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_like_tag"
+            app:layout_constraintTop_toTopOf="@id/tv_like_tag"
+            tools:text="2023-04-28" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_review_user_comment"
+            style="@style/Text_14_Regular.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="18dp"
+            android:lineSpacingExtra="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_like_tag"
+            tools:text="@string/dummy_text_multi_line" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_review_user_comment">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/siv_first"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundingImageView"
+                    tools:src="@drawable/img_test_location" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/siv_second"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundingImageView"
+                    tools:src="@drawable/img_test_location" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/siv_third"
+                    android:layout_width="130dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="10dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundingImageView"
+                    tools:src="@drawable/img_test_location" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

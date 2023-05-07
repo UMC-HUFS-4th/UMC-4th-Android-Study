@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/category_lodging"
+        android:title="숙소"/>
+
+    <item android:id="@+id/category_walking"
+        android:title="산책"/>
+
+    <item android:id="@+id/category_cafe_food"
+        android:title="카페/음식점"/>
+</menu>

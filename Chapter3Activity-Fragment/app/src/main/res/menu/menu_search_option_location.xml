@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/location_seoul"
+        android:title="서울"/>
+
+    <item android:id="@+id/location_jeju"
+        android:title="제주"/>
+
+    <item android:id="@+id/location_gangwon"
+        android:title="강원"/>
+</menu>

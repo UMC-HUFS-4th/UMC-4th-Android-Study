@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="6dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_location_most_review_top"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/TopRoundingImageView"
+            tools:src="@drawable/img_test_location" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:background="@color/black_gray_transparent"
+            app:layout_constraintBottom_toBottomOf="@id/siv_location_most_review_top"
+            app:layout_constraintEnd_toEndOf="@id/siv_location_most_review_top"
+            app:layout_constraintStart_toStartOf="@id/siv_location_most_review_top"
+            app:layout_constraintTop_toTopOf="@id/siv_location_most_review_top"
+            app:shapeAppearanceOverlay="@style/TopRoundingImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_location_name_most_review"
+            style="@style/Text_18_Bold.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="@id/siv_location_most_review_top"
+            app:layout_constraintStart_toStartOf="@id/siv_location_most_review_top"
+            app:layout_constraintTop_toTopOf="@id/siv_location_most_review_top"
+            tools:text="새마을한마음목장" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_location_category"
+            style="@style/Text_10_Regular.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_transparent_white_circle"
+            android:paddingStart="12dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintStart_toStartOf="@id/siv_location_most_review_top"
+            app:layout_constraintTop_toBottomOf="@id/tv_location_name_most_review"
+            tools:text="숙소" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_location_most_review_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/bg_gradient_red_pinkpurple"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/siv_location_most_review_top"
+            app:shapeAppearanceOverlay="@style/BottomRoundingImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_review_top"
+            style="@style/Text_12_Medium.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:elevation="4dp"
+            android:lineSpacingExtra="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/siv_location_most_review_top"
+            tools:text="날씨 좋을 때 꼭 가보세요. 고지여서 시원하고 반려견이 뛰어 놀 공간도 많아서 엄청 좋아요!" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_reviewer_top"
+            style="@style/Text_10_Regular.WeakGray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="@id/tv_review_top"
+            app:layout_constraintStart_toStartOf="@id/tv_review_top"
+            app:layout_constraintTop_toBottomOf="@id/tv_review_top"
+            tools:text="우린여러분의부석수" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_review_middle"
+            style="@style/Text_12_Medium.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="18dp"
+            android:elevation="4dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reviewer_top"
+            tools:text="주변에 동물들이 많아서 아이가 굉장히 신나게 놀았음 ㅋㅋ 근데 바람 많이 부는 날에는 모래바람이 많이 불어서 가는거 비추천함" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_reviewer_middle"
+            style="@style/Text_10_Regular.WeakGray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="@id/tv_review_middle"
+            app:layout_constraintStart_toStartOf="@id/tv_review_middle"
+            app:layout_constraintTop_toBottomOf="@id/tv_review_middle"
+            tools:text="밥말은라면" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_review_bottom"
+            style="@style/Text_12_Medium.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="18dp"
+            android:elevation="4dp"
+            android:lineSpacingExtra="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reviewer_middle"
+            tools:text="풍경이 너무 좋다." />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_reviewer_bottom"
+            style="@style/Text_10_Regular.WeakGray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="30dp"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_review_bottom"
+            app:layout_constraintStart_toStartOf="@id/tv_review_bottom"
+            app:layout_constraintTop_toBottomOf="@id/tv_review_bottom"
+            tools:text="GoingCrazy" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

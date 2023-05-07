@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.home.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_home_search_bar_hint"
+                style="@style/Text_14_Regular.Gray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/bg_box_solid_gray"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="@string/home_search_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_home_location_group"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_search_bar_hint"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/c_jeju"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제주도"
+                    app:chipCornerRadius="8dp"
+                    app:chipStrokeColor="@color/gray2"
+                    tools:checked="true" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/c_gangwon"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="강원도"
+                    app:chipCornerRadius="8dp"
+                    tools:checked="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/c_seoul"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="서울"
+                    app:chipCornerRadius="8dp"
+                    tools:checked="false" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ib_home_category_lodging"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/transparent"
+                android:src="@drawable/img_cat_home"
+                app:layout_constraintEnd_toStartOf="@id/ib_home_category_walking"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cg_home_location_group" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ib_home_category_walking"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:src="@drawable/img_cat_walking"
+                app:layout_constraintBottom_toBottomOf="@id/ib_home_category_lodging"
+                app:layout_constraintEnd_toStartOf="@id/ib_home_category_cafe_food"
+                app:layout_constraintStart_toEndOf="@id/ib_home_category_lodging"
+                app:layout_constraintTop_toTopOf="@id/ib_home_category_lodging" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ib_home_category_cafe_food"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="18dp"
+                android:background="@color/transparent"
+                android:src="@drawable/img_cat_cafe"
+                app:layout_constraintBottom_toBottomOf="@id/ib_home_category_walking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ib_home_category_walking"
+                app:layout_constraintTop_toTopOf="@id/ib_home_category_walking" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_home_category_lodging_text"
+                style="@style/Text_12_Medium.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="숙소"
+                app:layout_constraintEnd_toEndOf="@id/ib_home_category_lodging"
+                app:layout_constraintStart_toStartOf="@id/ib_home_category_lodging"
+                app:layout_constraintTop_toBottomOf="@id/ib_home_category_lodging" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_home_category_walking_text"
+                style="@style/Text_12_Medium.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="산책"
+                app:layout_constraintEnd_toEndOf="@id/ib_home_category_walking"
+                app:layout_constraintStart_toStartOf="@id/ib_home_category_walking"
+                app:layout_constraintTop_toBottomOf="@id/ib_home_category_walking" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_home_category_cafe_food"
+                style="@style/Text_12_Medium.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="카페/음식점"
+                app:layout_constraintEnd_toEndOf="@id/ib_home_category_cafe_food"
+                app:layout_constraintStart_toStartOf="@id/ib_home_category_cafe_food"
+                app:layout_constraintTop_toBottomOf="@id/ib_home_category_cafe_food" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_ad_board"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_category_lodging_text"
+                tools:background="@color/gray3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/v_ad_indicator"
+                style="@style/Text_10_Regular.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_transparent_black_gray_circle"
+                android:paddingStart="20dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/vp_ad_board"
+                app:layout_constraintEnd_toEndOf="@id/vp_ad_board"
+                tools:text="1 / 3" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_section_middle"
+                android:layout_width="0dp"
+                android:layout_height="12dp"
+                app:dividerColor="@color/gray4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vp_ad_board" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_favorite_location"
+                style="@style/Text_18_ExtraBold.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="18dp"
+                android:text="인기있는 여행지는?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_section_middle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_favorite_location_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_favorite_location"
+                tools:listitem="@layout/item_home_best_location" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title_review_sorted"
+                style="@style/Text_18_ExtraBold.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                android:text="리뷰가 많은 여행지는?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_favorite_location_container" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_review_sorted_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_review_sorted"
+                tools:listitem="@layout/item_home_review_location" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

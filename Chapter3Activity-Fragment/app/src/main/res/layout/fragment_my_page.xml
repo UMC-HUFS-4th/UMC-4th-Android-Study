@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.mypage.MyPageFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray4"
+            android:padding="12dp">
+
+            <View
+                android:id="@+id/v_profile_container"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:background="@drawable/bg_gradient_green_purple"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_my_info"
+                style="@style/Text_18_Bold.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:text="내 정보"
+                app:layout_constraintEnd_toEndOf="@id/v_profile_container"
+                app:layout_constraintStart_toStartOf="@id/v_profile_container"
+                app:layout_constraintTop_toTopOf="@id/v_profile_container" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_user_profile_photo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_user_profile"
+                app:layout_constraintBottom_toBottomOf="@id/v_profile_container"
+                app:layout_constraintStart_toStartOf="@id/v_profile_container"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_info" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_nickname"
+                style="@style/Text_16_Bold.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="20dp"
+                android:maxLines="2"
+                app:layout_constraintEnd_toEndOf="@id/v_profile_container"
+                app:layout_constraintStart_toEndOf="@id/iv_user_profile_photo"
+                app:layout_constraintTop_toTopOf="@id/iv_user_profile_photo"
+                android:text="시계는와치"
+                tools:text="시계는와치" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_stamp_level_notice"
+                style="@style/Text_12_Regular.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="6dp"
+                android:text="스탬프 레벨 - "
+                app:layout_constraintStart_toEndOf="@id/iv_user_profile_photo"
+                app:layout_constraintTop_toBottomOf="@id/tv_user_nickname" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_user_stamp_level"
+                style="@style/Text_12_Bold.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/tv_stamp_level_notice"
+                app:layout_constraintStart_toEndOf="@id/tv_stamp_level_notice"
+                app:layout_constraintTop_toTopOf="@id/tv_stamp_level_notice"
+                android:text="Lv5"
+                tools:text="Lv5" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_stamp_area"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_white_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_profile_container">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_stamp_title"
+                    style="@style/Text_18_Bold.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="스탬프"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_stamp_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_cylinder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_stamp_title" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_stamp_area_in_title"
+                    style="@style/Text_16_Medium.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:text="리뷰력"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_stamp_icon"
+                    app:layout_constraintTop_toTopOf="@id/iv_stamp_icon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_stamp_area_in_subtitle"
+                    style="@style/Text_12_Regular.Gray"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="3dp"
+                    android:text="좋은 리뷰가 쌓이면 혜택이 배로!"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_stamp_icon"
+                    app:layout_constraintTop_toBottomOf="@id/tv_stamp_area_in_title" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_stamp_level"
+                    style="@style/Text_16_Medium.Green"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintEnd_toStartOf="@id/tv_stamp_integer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_stamp_area_in_subtitle"
+                    android:text="Lv5"
+                    tools:text="Lv5" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_stamp_integer"
+                    style="@style/Text_14_Regular.Green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_stamp_level"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_stamp_level"
+                    android:text="4 / 40"
+                    tools:text="4 / 40" />
+
+                <androidx.core.widget.ContentLoadingProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:id="@+id/pgb_review_power"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/progress_custom"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_stamp_level" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_review_area"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_white_radius"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_stamp_area">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_review_title"
+                    style="@style/Text_18_Bold.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="리뷰"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_review_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_chat_bubble"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_review_title" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_review_area_in_title"
+                    style="@style/Text_16_Medium.Black"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:text="내가 작성한 리뷰"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/iv_review_icon"
+                    app:layout_constraintTop_toTopOf="@id/iv_review_icon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_review_area_in_subtitle"
+                    style="@style/Text_12_Regular.Gray"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="3dp"
+                    android:text="모아보기"
+                    app:layout_constraintStart_toEndOf="@id/iv_review_icon"
+                    app:layout_constraintTop_toBottomOf="@id/tv_review_area_in_title" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_review_area_in_subtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_review_area_in_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_logout"
+                style="@style/Text_14_Regular.Red"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_box_white"
+                android:padding="16dp"
+                android:stateListAnimator="@null"
+                android:text="로그아웃"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_review_area" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

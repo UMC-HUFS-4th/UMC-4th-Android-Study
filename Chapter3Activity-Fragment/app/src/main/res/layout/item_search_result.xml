@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray4"
+        android:paddingStart="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_white_radius"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/siv_search_location_image"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/RoundingImageView"
+                tools:src="@drawable/img_test_location" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_location_category"
+                style="@style/Text_10_Regular.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_transparent_white_circle"
+                android:paddingStart="14dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="14dp"
+                android:paddingBottom="2dp"
+                app:layout_constraintStart_toStartOf="@id/siv_search_location_image"
+                app:layout_constraintTop_toTopOf="@id/siv_search_location_image"
+                tools:text="숙소" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_location_name"
+                style="@style/Text_16_Bold.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@id/iv_location_like"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/siv_search_location_image"
+                tools:text="제주석수펜션" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_location_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/ic_like"
+                app:layout_constraintBottom_toBottomOf="@id/tv_location_name"
+                app:layout_constraintEnd_toStartOf="@id/tv_location_like_count"
+                app:layout_constraintTop_toTopOf="@id/tv_location_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_location_like_count"
+                style="@style/Text_12_Regular.Green"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/tv_location_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_location_name"
+                tools:text="41" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_location_location_info"
+                style="@style/Text_12_Regular.Gray"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_location_name"
+                tools:text="서울특별시 동일로60길 10" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_hashtag_container"
+                style="@style/HashTagChipStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:chipSpacingHorizontal="3dp"
+                app:chipSpacingVertical="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_location_location_info">
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

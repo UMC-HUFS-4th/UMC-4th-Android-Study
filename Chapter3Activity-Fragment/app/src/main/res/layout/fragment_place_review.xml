@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.review.PlaceReviewFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ib_evaluation_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_arrow_left"
+                app:layout_constraintEnd_toStartOf="@id/tv_review_top_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_review_top_title"
+                style="@style/Text_18_Medium.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="리뷰 작성"
+                app:layout_constraintBottom_toBottomOf="@id/ib_evaluation_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ib_evaluation_close"
+                app:layout_constraintTop_toTopOf="@id/ib_evaluation_close" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_first_qa__title"
+                style="@style/Text_18_Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="해당 장소를 추천하시나요?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ib_evaluation_close" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_evaluation_group"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_first_qa__title"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/c_like"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="추천"
+                    app:chipCornerRadius="8dp"
+                    app:chipStrokeColor="@color/gray2" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/c_normal"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="보통"
+                    app:chipCornerRadius="8dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/c_dislike"
+                    style="@style/CustomChipStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비추천"
+                    app:chipCornerRadius="8dp" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_section_first"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                app:dividerColor="@color/gray4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cg_evaluation_group" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_second_qa_title"
+                style="@style/Text_18_Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="함께한 반려견의 수를 알려주세요."
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_section_first" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_picker_description_small"
+                style="@style/Text_14_Regular.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="소형견"
+                app:layout_constraintEnd_toStartOf="@id/tv_picker_description_normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_second_qa_title" />
+
+            <NumberPicker
+                android:id="@+id/np_small_dog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:theme="@style/DatePickerCustomSize"
+                app:layout_constraintEnd_toEndOf="@id/tv_picker_description_small"
+                app:layout_constraintStart_toStartOf="@id/tv_picker_description_small"
+                app:layout_constraintTop_toBottomOf="@id/tv_picker_description_small" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_picker_description_normal"
+                style="@style/Text_14_Regular.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="중형견"
+                app:layout_constraintEnd_toStartOf="@id/tv_picker_description_large"
+                app:layout_constraintStart_toEndOf="@id/tv_picker_description_small"
+                app:layout_constraintTop_toBottomOf="@id/tv_second_qa_title" />
+
+            <NumberPicker
+                android:id="@+id/np_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/DatePickerCustomSize"
+                app:layout_constraintEnd_toEndOf="@id/tv_picker_description_normal"
+                app:layout_constraintStart_toStartOf="@id/tv_picker_description_normal"
+                app:layout_constraintTop_toBottomOf="@id/tv_picker_description_normal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_picker_description_large"
+                style="@style/Text_14_Regular.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="대형견"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_picker_description_normal"
+                app:layout_constraintTop_toBottomOf="@id/tv_second_qa_title" />
+
+            <NumberPicker
+                android:id="@+id/np_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/DatePickerCustomSize"
+                app:layout_constraintEnd_toEndOf="@id/tv_picker_description_large"
+                app:layout_constraintStart_toStartOf="@id/tv_picker_description_large"
+                app:layout_constraintTop_toBottomOf="@id/tv_picker_description_large" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_section_second"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="18dp"
+                app:dividerColor="@color/gray4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/np_small_dog" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_third_qa_title"
+                style="@style/Text_18_Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="좋았던 점은 무엇인가요?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_section_second" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_like_keyword_group"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_third_qa_title" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_section_third"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                app:dividerColor="@color/gray4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cg_like_keyword_group" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_fourth_qa_title"
+                style="@style/Text_18_Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="별로였던 점은 무엇인가요?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_section_third" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_dislike_keyword_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fourth_qa_title" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_section_fourth"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                app:dividerColor="@color/gray4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cg_dislike_keyword_group" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_fifth_qa_title"
+                style="@style/Text_18_Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="추가적인 평을 원하시나요?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_section_fourth" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etv_review_input_box"
+                style="@style/Text_12_Regular.Black"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/bg_box_gray"
+                android:gravity="top"
+                android:hint="또 다른 이야기가 있으면 얼마든지 적어주세요."
+                android:padding="18dp"
+                android:textColorHint="@color/gray2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fifth_qa_title" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/div_section_fifth"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="18dp"
+                app:dividerColor="@color/gray4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etv_review_input_box" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_sixth_qa_title"
+                style="@style/Text_18_Bold.Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="등록할 사진이 있으신가요?"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/div_section_fifth" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_add_photo"
+                style="@style/Text_14_Regular.Blue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/bg_box_blue"
+                android:text="첨부하기"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_sixth_qa_title" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsv_photo_layout_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_add_photo">
+
+                <LinearLayout
+                    android:id="@+id/ll_photo_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_evaluation_conplete"
+                style="@style/Text_14_Regular.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_request_btn_green"
+                android:stateListAnimator="@null"
+                android:text="완료"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hsv_photo_layout_container" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <!-- 폰트 적용 + 굵기에 따라 정의 -->
+    <style name="FontWeight_1_Thin"><item name="android:fontFamily">@font/scdream_thin</item></style>
+    <style name="FontWeight_2_ExtraLight"><item name="android:fontFamily">@font/scdream_extra_light</item></style>
+    <style name="FontWeight_3_Light"><item name="android:fontFamily">@font/scdream_light</item></style>
+    <style name="FontWeight_4_Regular"><item name="android:fontFamily">@font/scdream_regular</item></style>
+    <style name="FontWeight_5_Medium"><item name="android:fontFamily">@font/scdream_medium</item></style>
+    <style name="FontWeight_6_Bold"><item name="android:fontFamily">@font/scdream_bold</item></style>
+    <style name="FontWeight_7_ExtraBold"><item name="android:fontFamily">@font/scdream_extra_bold</item></style>
+    <style name="FontWeight_8_Heavy"><item name="android:fontFamily">@font/scdream_heavy</item></style>
+    <style name="FontWeight_9_Black"><item name="android:fontFamily">@font/scdream_black</item></style>
+
+    <!-- Extra Bold 텍스트 -->
+    <style name="Text_32_ExtraBold" parent="FontWeight_7_ExtraBold"><item name="android:textSize">32sp</item></style>
+    <style name="Text_30_ExtraBold" parent="FontWeight_7_ExtraBold"><item name="android:textSize">30sp</item></style>
+    <style name="Text_22_ExtraBold" parent="FontWeight_7_ExtraBold"><item name="android:textSize">22sp</item></style>
+    <style name="Text_18_ExtraBold" parent="FontWeight_7_ExtraBold"><item name="android:textSize">18sp</item></style>
+
+    <style name="Text_32_ExtraBold.Black" parent="Text_32_ExtraBold">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_32_ExtraBold.Green" parent="Text_32_ExtraBold">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_32_ExtraBold.White" parent="Text_32_ExtraBold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_30_Bold.White" parent="Text_30_ExtraBold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_22_Bold.Black" parent="Text_22_ExtraBold">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_22_Bold.White" parent="Text_22_ExtraBold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_18_ExtraBold.Black" parent="Text_18_ExtraBold">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Bold 텍스트 -->
+    <style name="Text_12_Bold" parent="FontWeight_6_Bold"><item name="android:textSize">12sp</item></style>
+    <style name="Text_14_Bold" parent="FontWeight_6_Bold"><item name="android:textSize">14sp</item></style>
+    <style name="Text_16_Bold" parent="FontWeight_6_Bold"><item name="android:textSize">16sp</item></style>
+    <style name="Text_18_Bold" parent="FontWeight_6_Bold"><item name="android:textSize">18sp</item></style>
+    <style name="Text_20_Bold" parent="FontWeight_6_Bold"><item name="android:textSize">20sp</item></style>
+
+    <style name="Text_12_Bold.Green" parent="Text_12_Bold">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_12_Bold.Purple" parent="Text_12_Bold">
+        <item name="android:textColor">@color/emo_purple</item>
+    </style>
+
+    <style name="Text_12_Bold.Red" parent="Text_12_Bold">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Text_12_Bold.White" parent="Text_12_Bold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_12_Bold.Blue" parent="Text_12_Bold">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Text_14_Bold.White" parent="Text_14_Bold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_14_Bold.Purple" parent="Text_14_Bold">
+        <item name="android:textColor">@color/emo_purple</item>
+    </style>
+
+    <style name="Text_14_Bold.Black" parent="Text_14_Bold">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_14_Bold.Gray1" parent="Text_14_Bold">
+        <item name="android:textColor">@color/gray1</item>
+    </style>
+
+    <style name="Text_14_Bold.Red" parent="Text_14_Bold">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Text_14_Bold.Green" parent="Text_14_Bold">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_16_Bold.White" parent="Text_16_Bold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_16_Bold.Black" parent="Text_16_Bold">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_18_Bold.White" parent="Text_18_Bold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_18_Bold.Black" parent="Text_18_Bold">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_18_Bold.Green" parent="Text_18_Bold">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_18_Bold.Red" parent="Text_18_Bold">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Text_18_Bold.Blue" parent="Text_18_Bold">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Text_20_Bold.White" parent="Text_20_Bold">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_20_Bold.Black" parent="Text_20_Bold">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+    <!-- Medium 텍스트   -->
+    <style name="Text_12_Medium" parent="FontWeight_5_Medium"><item name="android:textSize">12sp</item></style>
+    <style name="Text_14_Medium" parent="FontWeight_5_Medium"><item name="android:textSize">14sp</item></style>
+    <style name="Text_16_Medium" parent="FontWeight_5_Medium"><item name="android:textSize">16sp</item></style>
+    <style name="Text_18_Medium" parent="FontWeight_5_Medium"><item name="android:textSize">18sp</item></style>
+
+    <style name="Text_12_Medium.Black" parent="Text_12_Medium">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_12_Medium.Green" parent="Text_12_Medium">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_12_Medium.Purple" parent="Text_12_Medium">
+        <item name="android:textColor">@color/emo_purple</item>
+    </style>
+
+    <style name="Text_12_Medium.Red" parent="Text_12_Medium">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Text_12_Medium.White" parent="Text_12_Medium">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_14_Medium.White" parent="Text_14_Medium">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_14_Medium.Black" parent="Text_14_Medium">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_14_Medium.Red" parent="Text_14_Medium">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Text_14_Medium.Green" parent="Text_14_Medium">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_16_Medium.White" parent="Text_16_Medium">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_16_Medium.Green" parent="Text_16_Medium">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_16_Medium.Black" parent="Text_16_Medium">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_18_Medium.Black" parent="Text_18_Medium">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_18_Medium.Green" parent="Text_18_Medium">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+
+    <!-- Regular 텍스트 -->
+    <style name="Text_20_Regular" parent="FontWeight_4_Regular"><item name="android:textSize">20sp</item></style>
+    <style name="Text_16_Regular" parent="FontWeight_4_Regular"><item name="android:textSize">16sp</item></style>
+    <style name="Text_14_Regular" parent="FontWeight_4_Regular"><item name="android:textSize">14sp</item></style>
+    <style name="Text_12_Regular" parent="FontWeight_4_Regular"><item name="android:textSize">12sp</item></style>
+    <style name="Text_10_Regular" parent="FontWeight_4_Regular"><item name="android:textSize">10sp</item></style>
+    <style name="Text_8_Regular" parent="FontWeight_4_Regular"><item name="android:textSize">8sp</item></style>
+
+    <style name="Text_20_Regular.Black" parent="Text_20_Regular">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_20_Regular.Gray" parent="Text_20_Regular">
+        <item name="android:textColor">@color/gray1</item>
+    </style>
+
+    <style name="Text_16_Regular.Green" parent="Text_16_Regular">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_14_Regular.Black" parent="Text_14_Regular">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_14_Regular.Blue" parent="Text_14_Regular">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Text_14_Regular.White" parent="Text_14_Regular">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_14_Regular.Red" parent="Text_14_Regular">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Text_14_Regular.Green" parent="Text_14_Regular">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_14_Regular.Gray" parent="Text_14_Regular">
+        <item name="android:textColor">@color/gray1</item>
+    </style>
+
+    <style name="Text_14_Regular.Gray0" parent="Text_14_Regular">
+        <item name="android:textColor">@color/gray0</item>
+    </style>
+
+    <style name="Text_12_Regular.Black" parent="Text_12_Regular">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_12_Regular.Blue" parent="Text_12_Regular">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="Text_12_Regular.Gray" parent="Text_12_Regular">
+        <item name="android:textColor">@color/gray2</item>
+    </style>
+
+    <style name="Text_12_Regular.Gray1" parent="Text_12_Regular">
+        <item name="android:textColor">@color/gray1</item>
+    </style>
+
+    <style name="Text_12_Regular.White" parent="Text_12_Regular">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_12_Regular.Red" parent="Text_12_Regular">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Text_12_Regular.Green" parent="Text_12_Regular">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="Text_10_Regular.White" parent="Text_10_Regular">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text_10_Regular.WeakGray" parent="Text_10_Regular">
+        <item name="android:textColor">@color/gray2.5</item>
+    </style>
+
+    <style name="Text_10_Regular.Gray0" parent="Text_10_Regular">
+        <item name="android:textColor">@color/gray0</item>
+    </style>
+
+    <style name="Text_10_Regular.Black" parent="Text_10_Regular">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text_8_Regular.Green" parent="Text_8_Regular">
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <!-- 바텀 네비게이션 텍스트 -->
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView.InActive" parent="Widget.BottomNavigationView">
+        <item name="android:fontFamily">@font/scdream_regular</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView.Active" parent="Widget.BottomNavigationView">
+        <item name="android:fontFamily">@font/scdream_medium</item>
+    </style>
+
+    <!-- 칩 버튼 커스텀 -->
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/selector_chip_color</item>
+        <item name="checkedIconTint">@color/white</item>
+        <item name="android:textColor">@color/selector_chip_text_color</item>
+        <item name="android:textAppearance">@style/Text_12_Regular</item>
+        <item name="rippleColor">@color/transparent</item>
+    </style>
+
+    <style name="NegativeKeywordChipStyle" parent="CustomChipStyle">
+        <item name="chipBackgroundColor">@color/selector_chip_color_negative</item>
+    </style>
+
+    <style name="HashTagChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="chipBackgroundColor">@color/gray4</item>
+        <item name="chipMinHeight">18dp</item>
+        <item name="chipMinTouchTargetSize">18dp</item>
+        <item name="chipEndPadding">1dp</item>
+        <item name="chipStartPadding">1dp</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="checkedTextViewStyle">@color/primary_color</item>
+        <item name="android:textAppearance">@style/Text_8_Regular.Green</item>
+    </style>
+
+    <!-- 이미지 모서리 설정 -->
+    <style name="CircleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundingImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+    </style>
+
+    <style name="TopRoundingImageView" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">20%</item>
+        <item name="cornerSizeTopRight">20%</item>
+    </style>
+
+    <style name="BottomRoundingImageView" parent="">
+        <item name="cornerFamilyBottomLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomLeft">20%</item>
+        <item name="cornerSizeBottomRight">20%</item>
+    </style>
+
+    <!-- Number Picker Custom -->
+    <style name="DatePickerCustomSize">
+        <!-- Divider color -->
+        <item name="colorControlNormal">@color/primary_color</item>
+        <!--Display textSize-->
+        <item name="android:textSize">14sp</item>
+        <!--Display textColor-->
+        <item name="android:editTextColor">@color/primary_color</item>
+        <item name="android:fontFamily">@font/scdream_medium</item>
+    </style>
+
+</resources>

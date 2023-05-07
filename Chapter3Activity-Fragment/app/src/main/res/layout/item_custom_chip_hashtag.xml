@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/HashTagChipStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_box_solid_gray_small"
+    app:chipCornerRadius="4dp"
+    tools:text="#해시태그 스타일의 커스텀 칩">
+
+</com.google.android.material.chip.Chip>

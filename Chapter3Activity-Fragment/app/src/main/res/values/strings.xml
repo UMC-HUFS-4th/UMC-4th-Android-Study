@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">TravelFeelDog</string>
+    <!--  로그인 화면  -->
+    <string name="request_btn_sign_in">구글 로그인</string>
+    <string name="sign_in_title_first_line">반려동물과 함께</string>
+    <string name="sign_in_title_second_line">여행지 선택은</string>
+    <string name="sign_in_title_third_line">여행필독서</string>
+
+    <!-- 회원가입 페이지 -->
+    <string name="sign_up_title_first_line">환영합니다!</string>
+    <string name="sign_up_nickname">닉네임</string>
+    <string name="sign_up_essential">*</string>
+    <string name="sign_up_input_box_hint">ex) 멍뭉이</string>
+    <string name="sign_up_duplicate_verification">중복확인</string>
+    <string name="sign_up_error_duplication">해당 닉네임이 이미 존재합니다.</string>
+    <string name="sign_up_error_none">닉네임 설정을 완료해주세요!</string>
+    <string name="sign_up_btn_done">완료</string>
+    <string name="sign_up_notification_correct_input">사용 가능한 닉네임입니다.</string>
+    <string name="sign_up_title_second_line">닉네임을 설정해 주세요.</string>
+
+    <!-- 바텀 네비게이션 -->
+    <string name="navigation_home">홈</string>
+    <string name="navigation_search">검색</string>
+    <string name="navigation_my_page">마이 페이지</string>
+
+    <!-- 검색 바 힌트 텍스트 -->
+    <string name="home_search_bar">검색어를 입력해 주세요.</string>
+
+    <!-- 더미 텍스트 -->
+    <string name="dummy_text_multi_line">미안하다. 이거 보여주려고 어그로 끌었다. 강원 석수펜션 여행지 레알 실화냐? 가슴이 웅장해진다. 내가 알던 그 찐따같던 강원 석수펜션 맞냐? 강원 석수펜션은 ㄹㅇ 전설이다. 나루토 사스케 싸움 수준 ㄹㅇ실화냐? 가슴이 웅장해진다. 내가 알던 그 찐따같던 나루토 맞냐? 진짜 나루토는 전설이다...</string>
+
+    <!-- 홈 이벤트 배너 텍스트 -->
+    <string name="first_sub_title">여행필독서 제대로 사용하기</string>
+    <string name="first_main_title">슬기로운 반려생활</string>
+    <string name="second_sub_title">리뷰 작성하고 쿠폰 받자!</string>
+    <string name="second_main_title">슬기로운 리뷰생활</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

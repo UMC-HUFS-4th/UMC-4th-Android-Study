@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.signIn.SignUpFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ib_sign_up_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:src="@drawable/ic_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_sign_up_title_first_line"
+            style="@style/Text_32_ExtraBold.Black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/sign_up_title_first_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ib_sign_up_close"
+            tools:text="환영합니다!" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_sign_up_title_second_line"
+            style="@style/Text_20_Regular.Gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/sign_up_title_second_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sign_up_title_first_line" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_info_nickname"
+            style="@style/Text_12_Regular.Black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/sign_up_nickname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sign_up_title_second_line" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_essential"
+            style="@style/Text_12_Regular.Red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_essential"
+            app:layout_constraintBottom_toBottomOf="@id/tv_info_nickname"
+            app:layout_constraintStart_toEndOf="@id/tv_info_nickname"
+            app:layout_constraintTop_toTopOf="@id/tv_info_nickname" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etv_input_box"
+            style="@style/Text_14_Regular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_box_gray"
+            android:hint="@string/sign_up_input_box_hint"
+            android:padding="16dp"
+            android:textColorHint="@color/gray2"
+            app:layout_constraintEnd_toStartOf="@id/tv_duplicate_verification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_info_nickname" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_duplicate_verification"
+            style="@style/Text_14_Regular.Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_box_green"
+            android:padding="16dp"
+            android:text="@string/sign_up_duplicate_verification"
+            app:layout_constraintBottom_toBottomOf="@id/etv_input_box"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etv_input_box"
+            app:layout_constraintTop_toTopOf="@id/etv_input_box" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_error_duplication"
+            style="@style/Text_12_Regular.Red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/sign_up_error_duplication"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_duplicate_verification" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_notification_correct_input"
+            style="@style/Text_12_Regular.Green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/sign_up_notification_correct_input"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etv_input_box" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_error_none"
+            style="@style/Text_12_Regular.Red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="6dp"
+            android:text="@string/sign_up_error_none"
+            android:textAlignment="center"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/btn_sing_up_done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sing_up_done"
+            style="@style/Text_14_Regular.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_request_btn_green"
+            android:padding="16dp"
+            android:stateListAnimator="@null"
+            android:text="@string/sign_up_btn_done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
