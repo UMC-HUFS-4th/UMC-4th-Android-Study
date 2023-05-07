@@ -1,5 +1,6 @@
 package com.dev.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,5 +19,11 @@ class SecondActivity : AppCompatActivity() {
             Log.d("Second activity", tmpString)
         }
         viewbinding.tvSecondActivity.text = tmpString
+
+        viewbinding.btSecondActivity.setOnClickListener{
+            val thirdIntent = Intent(this@SecondActivity,ThirdActivity::class.java)
+            startActivity(thirdIntent)
+        }
+
     }
 }
