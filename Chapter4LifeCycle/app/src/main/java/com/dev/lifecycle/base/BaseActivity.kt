@@ -20,7 +20,6 @@ abstract class BaseActivity<VB: ViewBinding>(val bindingFactory: (LayoutInflater
         Log.i(TAG,"onRestart")
     }
 
-
     override fun onStart() {
         super.onStart()
         Log.i(TAG,"onStart")
