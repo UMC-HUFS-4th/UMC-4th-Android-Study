@@ -1,6 +1,7 @@
 package com.dev.lifecycle.presentation
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -14,12 +15,20 @@ class MemoActivity : BaseActivity<ActivityMemoBinding>({ActivityMemoBinding.infl
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.btMemoNext.setOnClickListener{
-
+            val intent:Intent = Intent(this@MemoActivity,ResultActivity::class.java)
+            intent.putExtra("text", binding.etMemeoText.text.toString())
+            startActivity(intent)
         }
     }
     override fun onResume() {
         super.onResume()
         binding.etMemeoText.setText(editText)
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+
     }
 
     override fun onPause() {
