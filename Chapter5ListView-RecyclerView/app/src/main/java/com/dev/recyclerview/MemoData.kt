@@ -1,6 +1,6 @@
 package com.dev.recyclerview
 
 data class MemoData(
-    var memo : String,
+    var memo : String?,
     val date : String
 )
