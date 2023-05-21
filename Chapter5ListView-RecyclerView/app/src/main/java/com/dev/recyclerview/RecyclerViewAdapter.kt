@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dev.recyclerview.databinding.ActivityMainBinding
 import com.dev.recyclerview.databinding.MemoListBinding
 
-class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>(){
+class RecyclerViewAdapter(private val clickListener: OnMemoClickListener) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>(){
     var datalist = mutableListOf<MemoData>()
     private lateinit var binding : MemoListBinding
 
@@ -20,6 +20,7 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
             binding.tvMemo.text = memoData.memo
             binding.tvDate.text = memoData.date
         }
+
     }
 
 
@@ -36,14 +37,20 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolde
     //레이아웃 내 view 연결
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bind(datalist[position])
+//        binding.root.setOnClickListener {
+//            datalist.removeAt(position)
+//            notifyDataSetChanged()
+//            Log.d(TAG, "잘 지워짐")
+//        }
         binding.root.setOnClickListener {
+            clickListener.onMemoClick(position)
             datalist.removeAt(position)
             notifyDataSetChanged()
-            Log.d(TAG, "잘 지워짐")
         }
 
     }
-}
 
-//onClickListner 작동 방식
-// itemclickListner <-> onItemClickListner(어댑터) <-> setItemClickListner(액티비티)
+    interface OnMemoClickListener {
+        fun onMemoClick(position: Int)
+    }
+}

@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.recyclerview.databinding.ActivityMainBinding
 import java.time.LocalDate
@@ -27,8 +28,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         //버튼 클릭하면 메모 추가 화면으로 가기
         //넘겨받은 데이터를 인스턴스화 해서 mdata에 넣기
         clickNewBtn()
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         
         initUserRecyclerView()
 
-// 시도 1) 아예 onClickListener사 작동하지 않음.
+// 시도 1) 아예 onClickListener 작동하지 않음.
 //
 //        adapter.setItemClickListener(object: RecyclerViewAdapter.OnItemClickListener{
 //            override fun onClick(v: View, position: Int) {
@@ -51,16 +50,27 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        })
     }
-
     override fun onRestart() {
         super.onRestart()
-        initUserRecyclerView()
+        Log.d(TAG, "돌아옴")
+//        clickNewBtn()
+        adapter.notifyDataSetChanged()
+//        initUserRecyclerView()
     }
 
     //어댑터 연결
     fun initUserRecyclerView(){
         //어댑터 객체 만들기
-        adapter = RecyclerViewAdapter()
+        adapter = RecyclerViewAdapter(object : RecyclerViewAdapter.OnMemoClickListener {
+            override fun onMemoClick(position: Int) {
+                //intent전달하기
+                val iIntent = Intent(this@MainActivity, SubActivity::class.java)
+                iIntent.putExtra("content", mData[position].memo.toString())
+                getResultText.launch(iIntent)
+                Log.d(TAG, "${position}번 아이템 클릭")
+
+            }
+        })
         //데이터 넣기
         adapter.datalist = mData
         //리사이클러뷰에 어댑터 연결
@@ -77,6 +87,7 @@ class MainActivity : AppCompatActivity() {
                 if (result.resultCode == RESULT_OK) {
                     val mString = result.data?.getStringExtra("back_message")
                     //현재시간 가져오기
+                    Log.d(TAG, "서브에서 받기 : " + mString )
                     val date = LocalDate.now().toString()
                     addData(mString, date)
                 }
