@@ -20,15 +20,12 @@ class RecyclerViewAdapter(private val clickListener: OnMemoClickListener) : Recy
             binding.tvMemo.text = memoData.memo
             binding.tvDate.text = memoData.date
         }
-
     }
-
 
     //아이템 레이아웃과 결합
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         binding = MemoListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(binding)
-
     }
 
     //리스트 내 아이템 개수
@@ -37,11 +34,15 @@ class RecyclerViewAdapter(private val clickListener: OnMemoClickListener) : Recy
     //레이아웃 내 view 연결
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.bind(datalist[position])
-//        binding.root.setOnClickListener {
-//            datalist.removeAt(position)
-//            notifyDataSetChanged()
-//            Log.d(TAG, "잘 지워짐")
-//        }
+        //길게 눌렀을 때 삭제
+        binding.root.setOnLongClickListener {
+            datalist.removeAt(position)
+            notifyDataSetChanged()
+            Log.d(TAG, "잘 지워짐")
+
+            true
+        }
+        //눌렀을 때 수정
         binding.root.setOnClickListener {
             clickListener.onMemoClick(position)
             datalist.removeAt(position)

@@ -28,32 +28,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //버튼 클릭하면 메모 추가 화면으로 가기
-        //넘겨받은 데이터를 인스턴스화 해서 mdata에 넣기
+        initUserRecyclerView()
         clickNewBtn()
 
         binding.btnNew.setOnClickListener {
             val intent = Intent(this@MainActivity, SubActivity::class.java)
             getResultText.launch(intent)
         }
-        
-        initUserRecyclerView()
-
-// 시도 1) 아예 onClickListener 작동하지 않음.
-//
-//        adapter.setItemClickListener(object: RecyclerViewAdapter.OnItemClickListener{
-//            override fun onClick(v: View, position: Int) {
-//                // 클릭 시 이벤트 작성
-//                Log.d(TAG, "listener 작동함")
-//                mData.removeAt(position)
-//                adapter.notifyDataSetChanged()
-//            }
-//        })
     }
+
     override fun onRestart() {
         super.onRestart()
-        Log.d(TAG, "돌아옴")
-//        clickNewBtn()
         adapter.notifyDataSetChanged()
 //        initUserRecyclerView()
     }
@@ -68,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                 iIntent.putExtra("content", mData[position].memo.toString())
                 getResultText.launch(iIntent)
                 Log.d(TAG, "${position}번 아이템 클릭")
-
             }
         })
         //데이터 넣기
