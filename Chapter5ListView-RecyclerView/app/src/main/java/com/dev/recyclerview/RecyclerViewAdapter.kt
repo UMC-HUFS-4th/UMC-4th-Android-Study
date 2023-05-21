@@ -1,5 +1,6 @@
 package com.dev.recyclerview
 
+import android.app.AlertDialog
 import android.content.ContentValues.TAG
 import android.util.Log
 import android.view.LayoutInflater
@@ -36,9 +37,7 @@ class RecyclerViewAdapter(private val clickListener: OnMemoClickListener) : Recy
         holder.bind(datalist[position])
         //길게 눌렀을 때 삭제
         binding.root.setOnLongClickListener {
-            datalist.removeAt(position)
-            notifyDataSetChanged()
-            Log.d(TAG, "잘 지워짐")
+            clickListener.deleteMemo(position)
 
             true
         }
@@ -53,5 +52,6 @@ class RecyclerViewAdapter(private val clickListener: OnMemoClickListener) : Recy
 
     interface OnMemoClickListener {
         fun onMemoClick(position: Int)
+        fun deleteMemo(position: Int)
     }
 }

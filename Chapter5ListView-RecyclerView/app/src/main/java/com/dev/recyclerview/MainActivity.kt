@@ -1,6 +1,7 @@
 package com.dev.recyclerview
 
 import android.content.ContentValues.TAG
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.util.Log
 import android.view.View
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.recyclerview.databinding.ActivityMainBinding
@@ -53,6 +55,25 @@ class MainActivity : AppCompatActivity() {
                 iIntent.putExtra("content", mData[position].memo.toString())
                 getResultText.launch(iIntent)
                 Log.d(TAG, "${position}번 아이템 클릭")
+            }
+
+            override fun deleteMemo(position: Int) {
+                AlertDialog.Builder(this@MainActivity)
+                    .setTitle("주의")
+                    .setMessage("이 메모를 정말 삭제하시겠습니까?")
+                    .setPositiveButton("삭제", object : DialogInterface.OnClickListener {
+                        override fun onClick(dialog: DialogInterface, which: Int) {
+                            mData.removeAt(position)
+                            Log.d(TAG, "잘 지워짐")
+                            adapter.notifyDataSetChanged()
+                        }
+                    })
+                    .setNegativeButton("취소", object : DialogInterface.OnClickListener {
+                        override fun onClick(dialog: DialogInterface, which: Int) {
+                        }
+                    })
+                    .create()
+                    .show()
             }
         })
         //데이터 넣기
