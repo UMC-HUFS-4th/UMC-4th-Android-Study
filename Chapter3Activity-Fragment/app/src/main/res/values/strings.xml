@@ -1,5 +1,12 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">Ch03_activity-_fragment</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+=======
+    <string name="app_name">activity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="second_activity_blank">아직 전달받은 값이 없습니다</string>
+>>>>>>> 8ea39e4c00dceeb75e25c7854738a93550a31d2c
 </resources>

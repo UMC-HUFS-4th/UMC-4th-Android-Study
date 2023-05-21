@@ -4,11 +4,19 @@ plugins {
 }
 
 android {
+<<<<<<< HEAD
     namespace 'com.dyongchan.ch05_recyclerview'
     compileSdk 33
 
     defaultConfig {
         applicationId "com.dyongchan.ch05_recyclerview"
+=======
+    namespace 'com.dev.recyclerview'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.dev.recyclerview"
+>>>>>>> 8ea39e4c00dceeb75e25c7854738a93550a31d2c
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -30,10 +38,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+<<<<<<< HEAD
 
     viewBinding {
         enabled = true
     }
+=======
+>>>>>>> 8ea39e4c00dceeb75e25c7854738a93550a31d2c
 }
 
 dependencies {
@@ -41,7 +52,10 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
+<<<<<<< HEAD
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+=======
+>>>>>>> 8ea39e4c00dceeb75e25c7854738a93550a31d2c
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
