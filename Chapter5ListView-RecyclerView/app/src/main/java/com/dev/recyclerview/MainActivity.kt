@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -36,10 +37,19 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, SubActivity::class.java)
             getResultText.launch(intent)
         }
+        
         initUserRecyclerView()
 
-        //onclicklistner로 터치하면 지우냐고 dialog 메세지 띄우고 [삭제]누르면 list에서 삭제하기
-        // deleteMemo() -> 이건 어댑터에서 구현해야 할 듯
+// 시도 1) 아예 onClickListener사 작동하지 않음.
+//
+//        adapter.setItemClickListener(object: RecyclerViewAdapter.OnItemClickListener{
+//            override fun onClick(v: View, position: Int) {
+//                // 클릭 시 이벤트 작성
+//                Log.d(TAG, "listener 작동함")
+//                mData.removeAt(position)
+//                adapter.notifyDataSetChanged()
+//            }
+//        })
     }
 
     override fun onRestart() {
@@ -67,14 +77,12 @@ class MainActivity : AppCompatActivity() {
                 if (result.resultCode == RESULT_OK) {
                     val mString = result.data?.getStringExtra("back_message")
                     //현재시간 가져오기
-                    Log.d(TAG, mString.toString()+"받음")
                     val date = LocalDate.now().toString()
                     addData(mString, date)
                 }
             }
         }
     }
-
 
     private fun addData(memo : String?, date : String){
         //새로운 데이터를 넣어서 add처리
