@@ -11,8 +11,8 @@
 
     <FrameLayout
         android:layout_gravity="center"
-        android:layout_width="400dp"
-        android:layout_height="400dp">
+        android:layout_width="350dp"
+        android:layout_height="350dp">
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/layout_viewpager"
             android:layout_width="match_parent"
@@ -25,7 +25,8 @@
             app:ci_drawable="@drawable/shape_black_oval"
             app:ci_height="7dp"
             app:ci_margin="4dp"
-            app:ci_width="7dp"/>
+            app:ci_width="7dp"
+            android:layout_gravity="bottom"/>
     </FrameLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
