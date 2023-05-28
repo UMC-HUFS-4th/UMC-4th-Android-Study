@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.dev.viewpager.databinding.FragmentCameraBinding
 import com.dev.viewpager.databinding.FragmentCommunityBinding
 
 class CommunityFragment : Fragment() {

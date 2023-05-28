@@ -10,7 +10,7 @@ class ViewPagerAdapter(fragmentActivity: HomeFragment): FragmentStateAdapter(fra
     // 불러올 Fragment 정의
     override fun createFragment(position: Int): Fragment{
         return when (position){
-            0 -> CameraFragment()
+            0 -> CircleFragment()
             1 -> PlantFragment()
             2 -> CommunityFragment()
             else -> CommunityFragment()

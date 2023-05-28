@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/cameraFragment"
-        android:title="Camera"
+        android:id="@+id/circleFragment"
+        android:title="Circle"
         android:icon="@drawable/camera"
         />
     <item

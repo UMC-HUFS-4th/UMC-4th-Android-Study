@@ -17,10 +17,10 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavi.run {
             setOnItemSelectedListener{item->
                 when(item.itemId){
-                    R.id.cameraFragment -> {
+                    R.id.circleFragment -> {
                         supportFragmentManager
                             .beginTransaction()
-                            .replace(binding.frameLayout.id, CameraFragment())
+                            .replace(binding.frameLayout.id, CircleFragment())
                             .commit()
                     }
                     R.id.homeFragment -> {
